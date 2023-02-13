@@ -1,2 +1,2 @@
-# Assigment2_PHP
-Repo for my PHP project
+# Assigment2_PHP in server side development 
+Repo for my PHP project that will give me a 1st class grade 
