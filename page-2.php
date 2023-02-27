@@ -1,5 +1,6 @@
 <?php include 'include/header.php';?>
 
+
 <main class="container">
   <div class="starter-template text-center">
     <h1>Page 2</h1>
@@ -7,6 +8,4 @@
   </div>
 
 </main><!-- /.container -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-  </body>
-</html>
+<?php include 'include/footer.php';?>
