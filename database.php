@@ -1,5 +1,5 @@
-<?php
-    $dsn = 'mysql:host=localhost;dbname=sportswear_shop';
+<!-- <?php
+    $dsn = 'mysql:host=localhost;dbname=shortsdatabase';
     $username = 'root';
     $password = '';
 
@@ -11,3 +11,5 @@
         exit();
     }
 ?>
+	
+ -->

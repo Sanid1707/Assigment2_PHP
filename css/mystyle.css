@@ -1,7 +1,7 @@
 /* Add your own CSS under here */
 
 footer {
-    background-color: #000000;
+    background-color: #5a1212;
     color: #ffffff;
     text-align: center;
     padding: 5px;
@@ -9,4 +9,17 @@ footer {
 
 .error {
     color: red;
+}
+
+.navbar navbar-expand-lg bg-info
+{
+background-color: red;
+}
+
+.table-responsive
+{
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-x: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
 }
