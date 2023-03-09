@@ -1,7 +1,12 @@
 
+<!-- coppied the base code same as the signup form and changed the code to login form -->
+
+
 <?php
-$success = 0;
-$user=0;
+$login=0;
+$invalid=0;
+
+
 
 
 if($_SERVER['REQUEST_METHOD']=='POST')
@@ -11,32 +16,32 @@ $username=$_POST['username'];
 $password=$_POST['password'];
 
 
-// this given code is working fine but i want to check that if username already exists then it should not insert the data in database and it should show that username already exists
+//used the same code as the signup form but changed the code to check the username and password
 $sql="SELECT * FROM `registration`
- WHERE username='$username'";
+ WHERE username='$username' AND password='$password'";
 $result=mysqli_query($con,$sql);
 if($result)
 {
   $nums=mysqli_num_rows($result);
   if($nums>0)
   {
-    // echo "Username exists";
-    $user=1;
+//    echo "Login successfully";
+//started the session and redirected to the index page
+    $login=1;
+    session_start();
+    $_SESSION['username']=$username;
+    header("location:index.php");
+
+
+
+
   }
   else
-  {
-      $sql="INSERT INTO `registration`(`username`, `password`)
-     values ('$username','$password')";
-      $result=mysqli_query($con,$sql);
-      if($result)
-          {
-                //  echo "successfully SignUp  ";
-                $success=1;
-          }
-      else
-          {
-                die(mysqli_error($con));
-          }
+  { 
+
+    // echo "Login failed";
+    $invalid=1;
+      
     }
 }
 }
@@ -58,7 +63,8 @@ if($result)
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>SignUp page</title>
+    <title> Login Page</title>
+
     <style>
 body 
 {
@@ -73,37 +79,37 @@ background-size:cover;
 }
 
     </style>
-
   </head>
   <body>
 
-<?php
-if($user)
+
+<!-- Php tags to print out bootstrap classes  -->
+
+  <?php
+if($login)
+{
+  echo' <div class="alert alert-primary" role="alert">
+   login  SignUp
+     </div>';
+}
+
+?>
+  <?php
+if($invalid)
 {
   echo' <div class="alert alert-danger" role="alert">
-        Oops! Username already exists.
+       Invalid credentials 
         </div>';
 }
 
 
 
 ?>
-<?php
-if($success)
-{
-  echo' <div class="alert alert-primary" role="alert">
-    Successfully Signed Up
-     </div>';
-}
 
-?>
-
-
-
-    <h1 class ="text-center">SignUp page</h1>
+    <h1 class ="text-center">Login to the site </h1>
      <div class="container-fluid mt-5 ">              <!--   creating a form inside of this  -->
         
-     <form action="sign.php" method="post">
+     <form action="login.php" method="post">
   <div class="form-group">
     <label for="exampleInputEmail1">UserName</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter  username
@@ -115,7 +121,7 @@ if($success)
     <input type="password" class="form-control"  placeholder=" Enter password " name="password">
   </div>
  
-  <button type="submit" class="btn btn-primary">Sign Up</button>
+  <button type="submit" class="btn btn-primary">Login </button>
 </form>
 
     </div>

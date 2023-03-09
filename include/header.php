@@ -49,10 +49,23 @@
           <a class="nav-link" href="#">About Us</a>
       
       </ul>
-      <form class="d-flex" role="search">
+         <!-- this right here gets the username from the session and displays it in the navbar -->
+      <h3 class="text-center text-warning ">Welcome
+        <?php 
+          echo $_SESSION['username'];
+      ?>
+      </h3>
+
+
+        <!-- logout button  -->
+   <div class="container">
+    <a href="logout.php" class="btn btn-primary ">Logout</a>
+    </div>
+
+      <!-- <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      </form> -->
     </div>
   </div>
 </nav>

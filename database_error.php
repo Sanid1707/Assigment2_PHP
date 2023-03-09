@@ -2,7 +2,7 @@
 include 'include/header.php';
 ?>
 
-<!-- the body section -->
+the body section -->
 <body>
 <dic class="container text-center mt-4">
 
@@ -14,4 +14,4 @@ include 'include/header.php';
         <p>&nbsp;</p>
 </div>
 
-    <?php include 'include/footer.php'; ?> -->
+    <?php include 'include/footer.php'; ?>

@@ -1,4 +1,16 @@
 <?php
+session_start();
+if(!isset($_SESSION['username']))
+{
+    header("location:login.php");
+}
+
+
+?>
+
+
+
+<?php
 require_once('database.php');
 $queryProducts = 'SELECT * FROM products';
 $statement = $db->prepare($queryProducts);
@@ -9,6 +21,7 @@ $statement->closeCursor();
 <?php 
 include 'include/header.php';
 ?>
+
 
 
 <main class="container">
