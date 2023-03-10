@@ -37,23 +37,29 @@ background-size:cover;
 
  
 
-    <h1 class ="text-center">Welcome to Sports Wear </h1>
-     <div class="container-fluid mt-5 ">            
-        
-
-  
-  
- <div class=text-center >
- <div class="container-fluid  ">    
-
-    <form action="entrypage.php" method="post">
+  <div class="welcome-container">
+  <div>
+    <h1 class="text-center text-light">Welcome to Sports Wear </h1>
+    <div class="container-fluid mt-5 ">
 
 
-<a href="login.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login</a>
-<a href="sign.php" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">SignUp</a>
-</form>
+
+
+        <div class=text-center>
+            <div class="container">
+
+                <form action="entrypage.php" method="post">
+
+
+                    <a href="login.php" class="btn btn-primary btn-lg active" role="button"
+                        aria-pressed="true">Login</a>
+                    <a href="sign.php" class="btn btn-secondary btn-lg active" role="button"
+                        aria-pressed="true">SignUp</a>
+                </form>
+            </div>
+        </div>
+  </div>
 </div>
-    </div>
 
    
   </body>
