@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -36,14 +37,12 @@
       <a class="nav-link active" aria-current="page" href="index.php">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Products</a>
+      <a class="nav-link" href="products.php">Products</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="contactpage.php">Contact Us</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">About Us</a>
-    </li>
+   
   </ul>
   <span class="navbar-text text-warning mx-3">Welcome, <?php echo $_SESSION['username']; ?></span>
   <a href="logout.php" class="btn btn-primary ">Logout</a>
@@ -51,28 +50,6 @@
 </div>
 </nav>
 
-      <!-- <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form> -->
+    
     </div>
   </div>
-</nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- js bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  </body>

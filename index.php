@@ -10,14 +10,6 @@ if(!isset($_SESSION['username']))
 
 
 
-<?php
-require_once('database.php');
-$queryProducts = 'SELECT * FROM products';
-$statement = $db->prepare($queryProducts);
-$statement->execute();
-$products = $statement->fetchAll();
-$statement->closeCursor();
-?>
 <?php 
 include 'include/header.php';
 ?>
@@ -51,34 +43,76 @@ include 'include/header.php';
 </div>
 
 
-<main class="container">
+
+<style>
+.card {
+  max-width: 900px;
+  margin: auto;
+  margin-top: 80px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  margin-bottom:100px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  height: 500px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-title {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #666;
+}
+</style>
+
+<div class="container">
+  <div class="card-columns">
+    <div class="card">
+      <img src="images/kalalund.jpg" class="card-img-top img-fluid" alt="Shoe 1">
+      <div class="card-body">
+        <h5 class="card-title">Waaiz west </h5>
+        <p class="card-text">Nike Air Max 270 React: These shoes are a combination of two of Nike's most popular technologies, the Air Max and React. They have a lightweight and breathable upper, with a foam midsole that is both comfortable and supportive. The outsole is made of durable rubber, and the shoe features Nike's signature Air Max cushioning in the heel for added comfort.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/kalibhoot.jpg" class="card-img-top img-fluid" alt="Shoe 2">
+      <div class="card-body">
+        <h5 class="card-title">Broken Iphone</h5>
+        <p class="card-text">Dr. Martens 1460 Smooth Leather Boots: These iconic boots have been a staple in punk and alternative fashion for decades. They are made of smooth leather and have a sturdy rubber sole with the classic yellow stitching around the edge. The boots have a lace-up front with metal eyelets and come in a range of colors.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/sexyjordan.jpg" class="card-img-top img-fluid" alt="Shoe 3">
+      <div class="card-body">
+        <h5 class="card-title"> Stressfull college </h5>
+        <p class="card-text">Adidas Ultraboost 21: These shoes are designed for running and have a sleek and modern design. The upper is made of breathable mesh material, and the midsole is made of Adidas' signature Boost foam, which provides responsive cushioning with every step. The outsole is made of Continental rubber for added durability and traction, and the shoe features a supportive heel counter for added stability.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
  
 
 
-  <h1>Product List</h1>
-    <section>
-        <!-- display a table of products -->
-        <div class="table-responsive">     <!-- // ADDED THIS DIV FROM BOOTSTRAP  --> 
-        <table class="table table-hover">   <!-- // ADDED THIS DIV FROM BOOTSTRAP  --> 
-            <tr>
-                <th>Code</th>
-                <th>Name</th>
-                <th>Price</th>
-              
-            </tr>
 
-            <?php foreach ($products as $product) : ?>
-            <tr>
-                <td><?php echo $product['name']; ?></td>
-                <td><?php echo $product['category_id']; ?></td>
-                <td class="right"><?php echo $product['price']; ?></td>
-               
-            </tr>
-            <?php endforeach; ?>
-        </table>
-        </div>
-    </section>
 
-</main><!-- /.container -->
+
 <?php include 'include/footer.php';?>
