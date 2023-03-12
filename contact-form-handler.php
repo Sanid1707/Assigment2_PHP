@@ -1,7 +1,7 @@
 <?php
 
 $errors = '';
-$myemail = 'sebastian.gates@dkit.ie';// <-----Put your DkIT email address here.
+$myemail = 'd00251835@student.dkit.ir';// <-----Put your DkIT email address here.
 if(empty($_POST['name'])  ||
    empty($_POST['email']) ||
    empty($_POST['message']))
