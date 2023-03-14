@@ -16,21 +16,23 @@ session_start();
 <form action="#" method="POST" class="needs-validation" novalidate>
   <div class="mb-3">
     <label for="name" class="form-label">Name</label>
-    <input type="text" class="form-control" id="name" name="name" required>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+
+
     <div class="invalid-feedback">
       Please enter your name.
     </div>
   </div>
   <div class="mb-3">
     <label for="email" class="form-label">Email</label>
-    <input type="email" class="form-control" id="email" name="email" required>
+    <input type="email" class="form-control" id="email" name="email" placeholder="@xxx" required>
     <div class="invalid-feedback">
       Please enter a valid email address.
     </div>
   </div>
   <div class="mb-3">
     <label for="subject" class="form-label">Subject</label>
-    <input type="text" class="form-control" id="subject" name="subject" required>
+    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
     <div class="invalid-feedback">
       Please enter a subject.
     </div>
@@ -44,7 +46,7 @@ session_start();
   </div>
   <div class="mb-3">
     <label for="phone" class="form-label">Phone</label>
-    <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+    <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="XXX-XXX-XXXX"required>
     <div class="invalid-feedback">
       Please enter a valid phone number in the format XXX-XXX-XXXX.
     </div>

@@ -15,6 +15,7 @@ $statement->closeCursor();
 <?php include 'include/header.php';?>
 <main class="container" style="margin-top: 50px; margin-bottom: 50px;">
     <h1 class="text-center mb-5">Product List</h1>
+    <h2> </h2>
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <?php foreach ($products as $product) : ?>
             <div class="col mb-4">

@@ -66,6 +66,12 @@ background-image:url('images/net.jpg') ;
 background-repeat:no-repeat; 
 background-size:cover;
 
+#login-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
 
 
 
@@ -115,6 +121,9 @@ if($success)
     </div>
   </div>
 </div>
+<a href="login.php" class="btn btn-primary" id="login-btn">login</a>
+
+
 
 
    

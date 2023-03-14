@@ -1,11 +1,6 @@
 
-<?php 
-session_start();
-
-?>
 
 <?php
-
 
 $errors = '';
 $myemail = 'd00251835@student.dkit.ie';// <-----Put your DkIT email address here.
@@ -47,9 +42,9 @@ if( empty($errors))
         $to = $myemail;
         $email_subject = "Contact form submission: $name";
         $email_body = "You have received a new message. ".
-        " Here are the details:\n Name: $name \n Email: $email_address \n Message \n $message \n Subject \n $subject \n Phone \n $phone \n Company \n $company \n Budget \n $budget";
+        " Here are the details:\n Name: $name \n Email: $email_address \n Message \n $message";
 
-        mail($to,$email_subject,$email_body,$headers, "-f $myemail, -r $myemail");
+        mail($to,$email_subject,$email_body,$headers);
         //redirect to the 'thank you' page
         header('Location: contact-form-thank-you.php');
 }

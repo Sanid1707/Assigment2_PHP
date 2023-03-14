@@ -49,5 +49,10 @@ background-color: red;
   }
 
 
-/* cards css */
 
+  INSERT INTO products (name, category_id, price, description, images)
+  VALUES
+  ( jordan1, 1, 'This is the description of Product 1', 'image1.jpg'),
+  ( jordan 2, 2, 'This is the description of Product 2', 'image2.jpg'),
+  ( jordan3, 3, 'This is the description of Product 3', 'image3.jpg');
+  
