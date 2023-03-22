@@ -3,7 +3,7 @@
 $HOSTNAME='localhost';
 $USERNAME='root';
 $PASSWORD='';
-$DATABASE='signupforms';
+$DATABASE='shortsdatabase';
 
 
 $con=mysqli_connect($HOSTNAME,$USERNAME,$PASSWORD,$DATABASE);
